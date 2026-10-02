@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Threading.Tasks;
 
 namespace HotelBooking.Core
@@ -68,10 +69,10 @@ namespace HotelBooking.Core
             {
                 for (DateTime d = startDate; d <= endDate; d = d.AddDays(1))
                 {
-                    var noOfBookings = from b in bookings
+                    var bookedRoomIdsOnThisDate = from b in bookings
                                        where b.IsActive && d >= b.StartDate && d <= b.EndDate
-                                       select b;
-                    if (noOfBookings.Count() >= noOfRooms)
+                                       select b.RoomId;
+                    if (bookedRoomIdsOnThisDate.Distinct().Count() >= noOfRooms) 
                         fullyOccupiedDates.Add(d);
                 }
             }
