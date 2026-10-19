@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBooking.Mvc", "HotelBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBooking.WebApi", "HotelBooking.WebApi\HotelBooking.WebApi.csproj", "{2A98B98E-16D8-4F8D-A2D2-E4C4377CBB30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelBooking.SeleniumTests", "HotelBooking.SeleniumTests\HotelBooking.SeleniumTests.csproj", "{80A3307F-F5EB-404C-B7A6-71A75F909937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2A98B98E-16D8-4F8D-A2D2-E4C4377CBB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A98B98E-16D8-4F8D-A2D2-E4C4377CBB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A98B98E-16D8-4F8D-A2D2-E4C4377CBB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A3307F-F5EB-404C-B7A6-71A75F909937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A3307F-F5EB-404C-B7A6-71A75F909937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A3307F-F5EB-404C-B7A6-71A75F909937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A3307F-F5EB-404C-B7A6-71A75F909937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
