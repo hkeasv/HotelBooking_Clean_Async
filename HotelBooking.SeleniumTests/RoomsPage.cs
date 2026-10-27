@@ -7,10 +7,10 @@ namespace HotelBooking.SeleniumTests;
 public class RoomsPage
 {
     // The locator for the rows of the rooms table on the "Rooms" page.
-    private static readonly By RoomRowsLocator = By.CssSelector("table.table tbody tr");
+    private readonly By RoomRowsLocator = By.CssSelector("table.table tbody tr");
     
     // The locator for the first cell (description) of each room row in the rooms table.
-    private static readonly By RoomDescriptionLocator = By.CssSelector("td:first-child");
+    private readonly By RoomDescriptionLocator = By.CssSelector("td:first-child");
 
     private readonly IWebDriver driver;
 

@@ -6,10 +6,10 @@ namespace HotelBooking.SeleniumTests;
 public class CreateRoomPage
 {
     // The locator for the "Description" input field on the "Create Room" page.
-    private static readonly By DescriptionInputLocator = By.Id("Description");
+    private readonly By DescriptionInputLocator = By.Id("Description");
     
     // The locator for the "Create" button on the "Create Room" page.
-    private static readonly By CreateButtonLocator =
+    private readonly By CreateButtonLocator =
         By.CssSelector("input[type='submit'][value='Create']");
 
     private readonly IWebDriver driver;
