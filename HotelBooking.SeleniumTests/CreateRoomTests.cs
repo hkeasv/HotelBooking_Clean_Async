@@ -26,9 +26,9 @@ public class CreateRoomTests : IDisposable
         // Arrange
         var createRoomPage = new CreateRoomPage(driver);
         createRoomPage.Visit();
-        var roomsPage = createRoomPage.CreateRoom("Test Room");
         
         // Act
+        var roomsPage = createRoomPage.CreateRoom("Test Room");
         var rooms = roomsPage.GetRooms();
         
         // Assert
