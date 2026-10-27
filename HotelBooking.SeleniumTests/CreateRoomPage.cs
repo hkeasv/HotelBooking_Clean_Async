@@ -6,10 +6,10 @@ namespace HotelBooking.SeleniumTests;
 public class CreateRoomPage
 {
     // The locator for the "Description" input field on the "Create Room" page.
-    private readonly By DescriptionInputLocator = By.Id("Description");
+    private readonly By descriptionInputLocator = By.Id("Description");
     
     // The locator for the "Create" button on the "Create Room" page.
-    private readonly By CreateButtonLocator =
+    private readonly By createButtonLocator =
         By.CssSelector("input[type='submit'][value='Create']");
 
     private readonly IWebDriver driver;
@@ -30,11 +30,11 @@ public class CreateRoomPage
     public RoomsPage CreateRoom(string description)
     {
         // Fill in the "Description" input field.
-        driver.FindElement(DescriptionInputLocator).SendKeys(description);
+        driver.FindElement(descriptionInputLocator).SendKeys(description);
         
         // Click the "Create" button to submit the form. The RoomsController Create
         // action method will navigate to the "Rooms" page after successful creation.
-        driver.FindElement(CreateButtonLocator).Click();
+        driver.FindElement(createButtonLocator).Click();
 
         // Return a new instance of the "Rooms" page after creating the room.
         return new RoomsPage(driver);

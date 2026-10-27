@@ -7,10 +7,10 @@ namespace HotelBooking.SeleniumTests;
 public class RoomsPage
 {
     // The locator for the rows of the rooms table on the "Rooms" page.
-    private readonly By RoomRowsLocator = By.CssSelector("table.table tbody tr");
+    private readonly By roomRowsLocator = By.CssSelector("table.table tbody tr");
     
     // The locator for the first cell (description) of each room row in the rooms table.
-    private readonly By RoomDescriptionLocator = By.CssSelector("td:first-child");
+    private readonly By roomDescriptionLocator = By.CssSelector("td:first-child");
 
     private readonly IWebDriver driver;
 
@@ -23,21 +23,21 @@ public class RoomsPage
         // least one room row is present in the table. This is an explicit wait to ensure
         // that the page has fully loaded before interacting with it.
         WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
-        wait.Until(d => d.FindElements(RoomRowsLocator).Count > 0);
+        wait.Until(d => d.FindElements(roomRowsLocator).Count > 0);
     }
 
     // Retrieves a read-only list of room descriptions displayed on the "Rooms" page.
     public IReadOnlyList<string> GetRooms()
     {
         // Find all the rows in the rooms table.
-        var roomRows = driver.FindElements(RoomRowsLocator);
+        var roomRows = driver.FindElements(roomRowsLocator);
         
         var rooms = new List<string>();
 
         // Iterate through each row and extract the room description from the first cell.
         foreach (var row in roomRows)
         {
-            var description = row.FindElement(RoomDescriptionLocator).Text;
+            var description = row.FindElement(roomDescriptionLocator).Text;
             // Add the room description to the list of rooms.
             rooms.Add(description);
         }
